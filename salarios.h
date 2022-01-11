@@ -16,6 +16,7 @@ class Salarios : public QMainWindow
 public:
     Salarios(QWidget *parent = nullptr);
     ~Salarios();
+
 private slots:
     void on_cmdcalcular_clicked();
 

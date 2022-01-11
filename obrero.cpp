@@ -83,18 +83,18 @@ QString Obrero::toString()
 QString Obrero::jornada2String()
 {
     switch(m_jornada){
-       case TipoJornada::Vespertina:
-           return "Vespertina";
-           break;
-       case TipoJornada::Matutina:
-           return "Matutina";
-           break;
-       case TipoJornada::Nocturna:
-           return "Nocturna";
-           break;
-       default:
-           return "";
-       }
+    case TipoJornada::Vespertina:
+        return "Vespertina";
+        break;
+    case TipoJornada::Matutina:
+        return "Matutina";
+        break;
+    case TipoJornada::Nocturna:
+        return "Nocturna";
+        break;
+    default:
+        return "";
+    }
 }
 
 Obrero::Obrero(const QString &nombre, int horas, TipoJornada jornada) : m_nombre(nombre),

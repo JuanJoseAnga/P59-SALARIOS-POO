@@ -2,7 +2,7 @@
 
 Controlador::Controlador(QObject *parent) : QObject(parent)
 {
-    this->m_obrero=nullptr;
+    this->m_obrero = nullptr;
 }
 
 bool Controlador::agregarObrero(QString nombre, int horas, TipoJornada jornada)
@@ -14,10 +14,8 @@ bool Controlador::agregarObrero(QString nombre, int horas, TipoJornada jornada)
 bool Controlador::calcularSalario()
 {
     //Validar que el obrero no sea nulo
-    if(this->m_obrero==nullptr)
+    if (m_obrero == nullptr)
         return false;
-
-
 
     // Deternimar el valor hora
     double valorHora = 0;
@@ -33,26 +31,32 @@ bool Controlador::calcularSalario()
         break;
     default:
         return false;
+    }
+    // Calculo de la horas extra
+    int horas = m_obrero->horas();
+    int horasExtra = 0;
+    if (m_obrero->horas() > 40){
+        horasExtra = m_obrero->horas() - 40;
+        horas = 40;
+    }
+    //Calculo del salario
+    double salarioBruto = horas * valorHora + horasExtra * (HORA_EXTRA * valorHora / 100);
+    //Calculo del descuento
+    double descuento = salarioBruto * IESS / 100;
+    //Calculo del salario neto (a recibir)
+    double salarioNeto = salarioBruto - descuento;
+    //Establecer valores al objeto
+    m_obrero->setSalarioBruto(salarioBruto);
+    m_obrero->setDescuento(descuento);
+    m_obrero->setSalarioNeto(salarioNeto);
 
-        // Calculo de la horas extra
-        int horas = m_obrero->horas();
-        int horasExtra = 0;
-        if (m_obrero->horas() > 40){
-            horasExtra = m_obrero->horas() - 40;
-            horas = 40;
-        }
-        //Calculo del salario
-        double salarioBruto = horas * valorHora + horasExtra * (HORA_EXTRA * valorHora / 100);
-        //Calculo del descuento
-        double descuento = salarioBruto * IESS / 100;
-        //Calculo del salario neto (a recibir)
-        double salarioNeto = salarioBruto - descuento;
-        //Establecer valores al objeto
-        m_obrero->setSalarioBruto(salarioBruto);
-        m_obrero->setDescuento(descuento);
-        m_obrero->setSalarioNeto(salarioNeto);
-        //Retornar true (todo se calculo correctamente)
-        return true;
+    //Retornar true (todo se calculo correctamente)
+    return true;
 
+}
+
+Obrero *Controlador::obrero() const
+{
+    return m_obrero;
 }
 

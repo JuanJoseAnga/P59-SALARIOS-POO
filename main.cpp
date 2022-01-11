@@ -11,11 +11,17 @@ int main(int argc, char *argv[])
     Salarios w;
     w.show();
 
-    Obrero *obj = new Obrero();
-    obj->agregarObrero("Juan",40,TipoJornada::Matutina);
+    //  Obrero *objObrero1 = new Obrero("Juan",47,TipoJornada::Vespertina);
 
-    if(obj->calcularSalario)
+    Controlador *obj = new Controlador();
 
+    obj->agregarObrero("Juan", 40, TipoJornada::Matutina);
+
+    if (obj->calcularSalario()){
+        qDebug() << obj->obrero()->toString();
+    }else{
+        qDebug() << "No se pudo realizar el cálculo de salarios";
+    }
 
 
     return a.exec();

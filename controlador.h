@@ -19,11 +19,11 @@ public:
     explicit Controlador(QObject *parent = nullptr);
     bool agregarObrero(QString nombre, int horas, TipoJornada jornada);
     bool calcularSalario();
-
+    Obrero *obrero() const;
 signals:
 
 private:
-    Obrero *obrero() const;
+    Obrero *m_obrero;;
 
 
 
