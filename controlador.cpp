@@ -2,6 +2,7 @@
 
 Controlador::Controlador(QObject *parent) : QObject(parent)
 {
+
     this->m_obrero = nullptr;
 }
 
@@ -11,9 +12,10 @@ bool Controlador::agregarObrero(QString nombre, int horas, TipoJornada jornada)
     return true;
 }
 
+
 bool Controlador::calcularSalario()
 {
-    //Validar que el obrero no sea nulo
+    // Validar que el obrero no sea nulo
     if (m_obrero == nullptr)
         return false;
 
@@ -24,7 +26,7 @@ bool Controlador::calcularSalario()
         valorHora = VESPERTINO;
         break;
     case TipoJornada::Matutina:
-        valorHora = MATUTINO;
+        valorHora = MATITUNO;
         break;
     case TipoJornada::Nocturna:
         valorHora = NOCTURNO;
@@ -39,20 +41,18 @@ bool Controlador::calcularSalario()
         horasExtra = m_obrero->horas() - 40;
         horas = 40;
     }
-    //Calculo del salario
+    // Calculo del salario
     double salarioBruto = horas * valorHora + horasExtra * (HORA_EXTRA * valorHora / 100);
-    //Calculo del descuento
+    // Calculo del descuento
     double descuento = salarioBruto * IESS / 100;
-    //Calculo del salario neto (a recibir)
+    // Calculo del salario neto (a recibir)
     double salarioNeto = salarioBruto - descuento;
-    //Establecer valores al objeto
+    // Establecer valores al objeto
     m_obrero->setSalarioBruto(salarioBruto);
     m_obrero->setDescuento(descuento);
     m_obrero->setSalarioNeto(salarioNeto);
-
-    //Retornar true (todo se calculo correctamente)
+    // Retirnar true (todo se calculo correctamente)
     return true;
-
 }
 
 Obrero *Controlador::obrero() const

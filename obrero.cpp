@@ -2,9 +2,9 @@
 
 Obrero::Obrero(QObject *parent) : QObject(parent)
 {
-    this->m_nombre= " ";
-    this->m_horas= 0;
-    this->m_jornada= TipoJornada::Matutina;
+    this->m_nombre = "";
+    this->m_horas = 0;
+    this->m_jornada = TipoJornada::Matutina;
 }
 
 const QString &Obrero::nombre() const
@@ -69,16 +69,16 @@ void Obrero::setDescuento(double newDescuento)
 
 QString Obrero::toString()
 {
-    QString str = " " ;
-    str.append("Nombre: "+ m_nombre + "\n");
-    str.append("Jornada: " + jornada2String()+ "\n");
-    str.append("Jornada: " + QString::number(m_horas)+ "\n");
-    str.append("Salario bruto: $" + QString::number(m_salarioBruto) + "\n");
-    str.append("Descuento: $" + QString::number(m_descuento)+"\n");
-    str.append("Salario Neto: " + QString::number(m_salarioNeto)+ "\n");
-
+    QString str = "";
+    str.append("Nombre: " + m_nombre + "\n");
+    str.append("Jornada: " + jornada2String() + "\n");
+    str.append("Horas: " + QString::number(m_horas) + "\n");
+    str.append("Salario Bruto: $" + QString::number(m_salarioBruto) + "\n");
+    str.append("Descuento: $" + QString::number(m_descuento) + "\n");
+    str.append("salario Neto: $" + QString::number(m_salarioNeto) + "\n");
     return str;
 }
+
 
 QString Obrero::jornada2String()
 {

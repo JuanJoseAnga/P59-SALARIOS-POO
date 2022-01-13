@@ -14,7 +14,6 @@ class Obrero : public QObject
 {
     Q_OBJECT
 public:
-
     explicit Obrero(QObject *parent = nullptr);
     Obrero(const QString &nombre, int horas, TipoJornada jornada);
 
@@ -47,6 +46,7 @@ private:
     double m_descuento;
 
     QString jornada2String();
+
 };
 
 #endif // OBRERO_H

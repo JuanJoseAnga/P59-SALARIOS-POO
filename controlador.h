@@ -5,9 +5,9 @@
 
 #include "obrero.h"
 
-#define MATUTINO 1.66
-#define VESPERTINO 1.80
-#define NOCTURNO 2.07
+#define MATITUNO 2.65
+#define VESPERTINO 2.73
+#define NOCTURNO 2.87
 
 #define HORA_EXTRA 50
 #define IESS 9.5
@@ -20,12 +20,11 @@ public:
     bool agregarObrero(QString nombre, int horas, TipoJornada jornada);
     bool calcularSalario();
     Obrero *obrero() const;
+
 signals:
 
 private:
-    Obrero *m_obrero;;
-
-
+    Obrero *m_obrero;
 
 };
 
