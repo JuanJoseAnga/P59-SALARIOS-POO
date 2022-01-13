@@ -6,251 +6,325 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>938</width>
-    <height>603</height>
+    <width>920</width>
+    <height>596</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Salarios</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="widget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>26</x>
-      <y>11</y>
-      <width>901</width>
-      <height>541</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>300</width>
-      <height>0</height>
-     </size>
-    </property>
-    <widget class="QWidget" name="widget_3" native="true">
-     <property name="geometry">
-      <rect>
-       <x>11</x>
-       <y>11</y>
-       <width>331</width>
-       <height>78</height>
-      </rect>
-     </property>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>11</y>
-        <width>54</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Nombre: </string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="inNombre">
-      <property name="geometry">
-       <rect>
-        <x>61</x>
-        <y>11</y>
-        <width>261</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="placeholderText">
-       <string>Ingrese el nombre aquí</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>42</y>
-        <width>42</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Horas: </string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="inHoras">
-      <property name="geometry">
-       <rect>
-        <x>61</x>
-        <y>42</y>
-        <width>261</width>
-        <height>25</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QGroupBox" name="groupBox">
-     <property name="geometry">
-      <rect>
-       <x>11</x>
-       <y>96</y>
-       <width>321</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="title">
-      <string>Jornada</string>
-     </property>
-     <widget class="QRadioButton" name="inMatutino">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>97</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Matutina</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="inVespertina">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>70</y>
-        <width>97</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Vespertina</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="inNocturna">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>100</y>
-        <width>97</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Nocturna</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="widget_4" native="true">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>11</x>
-       <y>139</y>
-       <width>339</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <widget class="QPushButton" name="cmaCalcular">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>20</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>&amp;Calcular</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>310</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Calcular</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="widget_2" native="true">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>0</y>
-       <width>441</width>
-       <height>311</height>
-      </rect>
-     </property>
-     <widget class="QPlainTextEdit" name="outResultado">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>10</y>
-        <width>391</width>
-        <height>271</height>
-       </rect>
-      </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <property name="placeholderText">
-       <string>Aqui se mostrará los calculos de los salarios</string>
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
       </property>
+      <widget class="QWidget" name="widget_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>11</y>
+         <width>331</width>
+         <height>78</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>11</y>
+          <width>54</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nombre: </string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="inNombre">
+        <property name="geometry">
+         <rect>
+          <x>61</x>
+          <y>11</y>
+          <width>261</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Ingrese el nombre aquí</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>42</y>
+          <width>42</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Horas: </string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="inHoras">
+        <property name="geometry">
+         <rect>
+          <x>61</x>
+          <y>42</y>
+          <width>261</width>
+          <height>25</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>96</y>
+         <width>321</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Jornada</string>
+       </property>
+       <widget class="QRadioButton" name="inMatutino">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>97</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Matutina</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="inVespertina">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>97</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Vespertina</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="inNocturna">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>97</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nocturna</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_4" native="true">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>139</y>
+         <width>339</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="cmaCalcular">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>20</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&amp;Calcular</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="cmdCalcular">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>310</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Calcular</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>0</y>
+         <width>441</width>
+         <height>311</height>
+        </rect>
+       </property>
+       <widget class="QPlainTextEdit" name="outResultado">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>10</y>
+          <width>391</width>
+          <height>271</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="placeholderText">
+         <string>Aqui se mostrará los calculos de los salarios</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_5" native="true">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>330</y>
+         <width>441</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>121</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Otros Resultados:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Salrio Bruto: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>55</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>IESS:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Salario Neto:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="outSalarioBruto">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>60</y>
+          <width>161</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0.00</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="outIESS">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>100</y>
+          <width>161</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0.00</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="outTotal">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>140</y>
+          <width>161</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0.00</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
-    </widget>
-    <widget class="QWidget" name="widget_5" native="true">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>330</y>
-       <width>441</width>
-       <height>191</height>
-      </rect>
-     </property>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Otros Resultados:</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>938</width>
+     <width>920</width>
      <height>25</height>
     </rect>
    </property>

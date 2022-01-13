@@ -12,12 +12,18 @@ Salarios::Salarios(QWidget *parent)
 Salarios::~Salarios()
 {
     delete ui;
+    m_controlador->m_totalIESS=0;
+    m_controlador->m_totalNeto=0;
+    m_controlador->m_totalbruto=0;
 }
 
 
 void Salarios::on_cmdCalcular_clicked()
 {
     calcular();
+    ui->outSalarioBruto->setText(QString::number(m_controlador->m_totalbruto, 'f',2));
+    ui->outIESS->setText(QString::number(m_controlador->m_totalIESS));
+    ui->outTotal->setText(QString::number(m_controlador->m_totalNeto, 'f',2));
 }
 
 void Salarios::limpiar()
@@ -26,6 +32,10 @@ void Salarios::limpiar()
     ui->inHoras->setValue(0);
     ui->inMatutino->setChecked(true);
     ui->inNombre->setFocus();
+    ui->outIESS->setText("0");
+    ui->outSalarioBruto->setText("0");
+    ui->outTotal->setText("0");
+
 }
 
 void Salarios::guardar()
@@ -44,6 +54,7 @@ void Salarios::guardar()
         QTextStream salida(&archivo);
         // Enviar los datos del resultado a la salida
         salida << ui->outResultado->toPlainText();
+        salida.operator<<("----------------------");
         // Mostrar 5 segundo que todo fue bien
         ui->statusbar->showMessage("Datos almacenados en " + nombreArchivo, 5000);
     }else {
@@ -129,7 +140,7 @@ void Salarios::calcular()
         // limpiar la interfaz
         limpiar();
         // Mostrar mensaje por 5 segundos en la barra de estado
-        ui->statusbar->showMessage("calculos procesados para " + nombre, 5000);
+        ui->statusbar->showMessage("Calculos procesados para " + nombre, 5000);
     }else {
         QMessageBox::critical(
                     this,
@@ -160,6 +171,7 @@ void Salarios::on_actionAbrir_triggered()
 
 void Salarios::on_actionAcerca_de_Salarios_triggered()
 {
+    /*
     // Crear un objeto de la ventana que queremos invocar
     Acerca *dialogo = new Acerca(this);
     // Enviar parámetro a la ventana
@@ -168,4 +180,5 @@ void Salarios::on_actionAcerca_de_Salarios_triggered()
     dialogo->exec();
     // Obtener datos de la ventana
     qDebug() << dialogo->valor();
+    */
 }

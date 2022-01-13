@@ -21,6 +21,10 @@ public:
     bool calcularSalario();
     Obrero *obrero() const;
 
+    double m_totalbruto;
+    double m_totalIESS;
+    double m_totalNeto;
+
 signals:
 
 private:
