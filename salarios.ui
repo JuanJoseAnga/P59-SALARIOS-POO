@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Salarios</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/new/prefix1/resources</normaloff>:/new/prefix1/resources</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -345,7 +349,7 @@
     <property name="title">
      <string>Ay&amp;uda</string>
     </property>
-    <addaction name="actionAcerca_de"/>
+    <addaction name="actioAcerca_de"/>
    </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuAyuda"/>
@@ -383,7 +387,7 @@
     <string>F1</string>
    </property>
   </action>
-  <action name="actionAcerca_de">
+  <action name="actioAcerca_de">
    <property name="text">
     <string>Ac&amp;erca de salarios</string>
    </property>
@@ -408,6 +412,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

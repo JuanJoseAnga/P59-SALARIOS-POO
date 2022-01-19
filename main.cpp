@@ -2,6 +2,7 @@
 #include "obrero.h"
 #include "controlador.h"
 
+
 #include <QApplication>
 #include <QDebug>
 
