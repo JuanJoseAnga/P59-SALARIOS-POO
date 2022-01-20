@@ -33,3 +33,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     iconwindows.qrc \
     resources.qrc
+
+DISTFILES += \
+    diagrama-salarios.qmodel
