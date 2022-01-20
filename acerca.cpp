@@ -7,6 +7,7 @@ Acerca::Acerca(QWidget *parent) :
 {
     ui->setupUi(this);
     m_valor = 5;
+
 }
 
 Acerca::~Acerca()
@@ -17,7 +18,7 @@ Acerca::~Acerca()
 void Acerca::setVersion(const QString &newVersion)
 {
     m_version = newVersion;
-    this->ui->lblNombre->setText("Salarios " + m_version);
+    this->ui->lblVersion->setText("Salarios " + m_version);
 }
 
 int Acerca::valor() const

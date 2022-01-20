@@ -1,0 +1,35 @@
+[33mcommit ecdebf1cf9f1ff6bd947db5951066414505cf815[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Juan Jose Angamarca <jangamarcac1@est.ups.edu.ec>
+Date:   Wed Jan 19 18:56:49 2022 -0500
+
+    Agregado pantalla de 'acerca de' y la clases
+
+[33mcommit 7675856729cee81ce3118652efecc2ac731e712f[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Juan Jose Angamarca <jangamarcac1@est.ups.edu.ec>
+Date:   Thu Jan 13 13:09:35 2022 -0500
+
+    Agregado, salario neto y bruto, ademas el IESS. Agregado widgets
+
+[33mcommit f57e45d4d0aae34c719d11c064b2c47eb0289988[m
+Author: Juan Jose Angamarca <jangamarcac1@est.ups.edu.ec>
+Date:   Thu Jan 13 12:12:39 2022 -0500
+
+    Correjimos guardar archivos, abrimos datos
+
+[33mcommit 1bc0d2ab878a98e723be7fff4f23457ab2aeb9f1[m
+Author: Juan Jose Angamarca <jangamarcac1@est.ups.edu.ec>
+Date:   Tue Jan 11 18:30:38 2022 -0500
+
+    Agregamos estilo, añadimos iconos, warnings y guardamos datos
+
+[33mcommit c491a3e123f773374ae2ee8414fe396e25d1711b[m
+Author: Juan Jose Angamarca <jangamarcac1@est.ups.edu.ec>
+Date:   Mon Jan 10 11:08:33 2022 -0500
+
+    Contorlador y modelo agregados
+
+[33mcommit 8e677d6c6795bc075624f7ab5b4f143bc8e80d22[m
+Author: Juan Jose Angamarca <jangamarcac1@est.ups.edu.ec>
+Date:   Thu Jan 6 13:08:22 2022 -0500
+
+    Commi inicial

@@ -14,8 +14,8 @@
    <string>Salarios</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
-    <normaloff>:/new/prefix1/resources</normaloff>:/new/prefix1/resources</iconset>
+   <iconset resource="iconwindows.qrc">
+    <normaloff>:/new/prefix1/Recursos/klipartz.com (4).png</normaloff>:/new/prefix1/Recursos/klipartz.com (4).png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -413,7 +413,7 @@
   </action>
  </widget>
  <resources>
-  <include location="resources.qrc"/>
+  <include location="iconwindows.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -32,9 +32,11 @@ void Salarios::limpiar()
     ui->inHoras->setValue(0);
     ui->inMatutino->setChecked(true);
     ui->inNombre->setFocus();
-    ui->outIESS->setText("0");
-    ui->outSalarioBruto->setText("0");
-    ui->outTotal->setText("0");
+    ui->outIESS->setText("0.00");
+    ui->outSalarioBruto->setText("0.00");
+    ui->outTotal->setText("0.00");
+
+
 
 }
 
@@ -54,6 +56,11 @@ void Salarios::guardar()
         QTextStream salida(&archivo);
         // Enviar los datos del resultado a la salida
         salida << ui->outResultado->toPlainText();
+        salida.operator<<("----------------------");
+        salida.operator<<("\nTOTAL:\n");
+        salida.operator<<("Salario Bruto: "+QString::number(m_controlador->m_totalbruto)+"\n");
+        salida.operator<<("Descuento TOTAL: "+QString::number(m_controlador->m_totalIESS)+"\n");
+        salida.operator<<("Salario Neto: "+QString::number(m_controlador->m_totalNeto)+"\n");
         salida.operator<<("----------------------");
         // Mostrar 5 segundo que todo fue bien
         ui->statusbar->showMessage("Datos almacenados en " + nombreArchivo, 5000);
@@ -82,40 +89,41 @@ void Salarios::abrir()
     if(archivo.open(QFile::ReadOnly)){
         // Crear un 'stream' de texto
         QTextStream entrada(&archivo);
-        // Leer todo el contenido del archivo
-        QString datos = entrada.readAll();
         // Cargar el contenido al área de texto
-        ui->outResultado->clear();
-        QString dato="",linea;
 
+        QString datos="",linea="";
 
-        while(entrada.atEnd()==false||linea!="------------------"){
+        while(entrada.atEnd()==false && linea!="----------------------"){
             linea=entrada.readLine();
-            if(linea=="----------------"){}else{
-                dato+=linea+"\n";
-            }
+            datos+=linea + "\n";
+
         }
-        /*
-        //Añadimos al archivo los valores
-        ui->outResultado->setPlainText(dato);
-        linea=entrada.readLine();
+        entrada.readLine();
+
         linea=entrada.readLine();
         linea.remove(0,15);
         ui->outSalarioBruto->setText(linea);
-        m_controlador->m_totalbruto=linea.toDouble();
+        m_controlador->m_totalbruto = ui->outSalarioBruto->text().toDouble();
+
         linea=entrada.readLine();
-        linea.remove(0,16);
+        linea.remove(0,17);
         ui->outIESS->setText(linea);
-        m_controlador->m_totalIESS=linea.toDouble();
+        m_controlador->m_totalIESS = ui->outIESS->text().toDouble();
+
         linea=entrada.readLine();
         linea.remove(0,14);
         ui->outTotal->setText(linea);
-        m_controlador->m_totalNeto=linea.toDouble();
-        */
+        m_controlador->m_totalNeto = ui->outTotal->text().toDouble();
 
 
+
+
+        //Cargar el contenido al area de texto
+        ui->outResultado->clear();
+        ui->outResultado->setPlainText(datos);
         // Mostrar 5 segundo que todo fue bien
         ui->statusbar->showMessage("Datos leidos desde " + nombreArchivo, 5000);
+
     }else {
         // Mensaje de error si no se puede abrir el archivo
         QMessageBox::warning(this,
@@ -187,6 +195,7 @@ void Salarios::on_actionNuevo_triggered()
 {
     limpiar();
     ui->outResultado->clear();
+
 }
 
 
@@ -199,6 +208,12 @@ void Salarios::on_actionAbrir_triggered()
 void Salarios::on_actionAcerca_de_Salarios_triggered()
 {
 
+
+
+}
+
+void Salarios::on_actioAcerca_de_triggered()
+{
     // Crear un objeto de la ventana que queremos invocar
     Acerca *dialogo = new Acerca(this);
     // Enviar parámetro a la ventana
@@ -207,5 +222,5 @@ void Salarios::on_actionAcerca_de_Salarios_triggered()
     dialogo->exec();
     // Obtener datos de la ventana
     qDebug() << dialogo->valor();
-
 }
+
